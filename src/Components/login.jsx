@@ -93,17 +93,13 @@ const Login = () => {
                        <form action='' onSubmit={handleSubmit}>
                        <Box sx={{marginLeft:"15%",}} classname="email">
                            <Typography sx={{ marginTop:"2%", fontSize:"18px", fontWeight:"600", color:"#2A2A2A"}}><label htmlFor="">Email ID</label></Typography>
-                           <Typography sx={{border:"none", background:"#FFFFFF", padding:"0px 20px", width:{xl:"400px",lg:"350px",md:"300px",sm:"400px",xs:"300px"}, boxShadow:"2px 2px 8px -2px rgba(0, 79, 149, 0.1)" }}><TextField background="white"  value={email} placeholder="xxxxxxxxxxxx" variant="outlined" onChange={(e)=>setEmail(e.target.value)} required sx={{
-      "& fieldset": { border: 'none' },
-    }} /></Typography>
+                           <Typography ><TextField sx={{border:"none", background:"#FFFFFF", padding:"0px 20px", width:{xl:"400px",lg:"350px",md:"300px",sm:"400px",xs:"300px"}, boxShadow:"2px 2px 8px -2px rgba(0, 79, 149, 0.1)","& fieldset": { border: 'none' } }} background="white"  value={email} placeholder="xxxxxxxxxxxx" variant="outlined" onChange={(e)=>setEmail(e.target.value)} required /></Typography>
     <Typography sx={{color:"red"}} variant='p'>{errors.email && <span className="error">{errors.email}</span>}</Typography>
                         </Box>
                         <Box  sx={{marginLeft:"15%",}} classname="Password">
                            <Typography sx={{ marginTop:"2%", fontSize:"18px", fontWeight:"600", color:"#2A2A2A"}}><label htmlFor="">Password</label></Typography>
-                           <Typography sx={{border:"none", background:"#FFFFFF", padding:"0px 20px", width:{xl:"400px",lg:"350px",md:"300px",sm:"400px",xs:"300px"}, boxShadow:"2px 2px 8px -2px rgba(0, 79, 149, 0.1)" }}><TextField background="white"  value={password} placeholder="xxxxxxxxxxxx" variant="outlined"  onChange={(e)=>setPassword(e.target.value)} required
-         sx={{
-      "& fieldset": { border: 'none',  },
-    }} type={showPassword ? "text" : "password"}  /></Typography>
+                           <Typography ><TextField sx={{border:"none", background:"#FFFFFF", padding:"0px 20px", width:{xl:"400px",lg:"350px",md:"300px",sm:"400px",xs:"300px"}, boxShadow:"2px 2px 8px -2px rgba(0, 79, 149, 0.1)","& fieldset": { border: 'none',  }, }} background="white"  value={password} placeholder="xxxxxxxxxxxx" variant="outlined"  onChange={(e)=>setPassword(e.target.value)} required
+        type={showPassword ? "text" : "password"}  /></Typography>
     <Typography sx={{color:"red"}} variant='p'>{errors.password && <span className="error">{errors.password}</span>}</Typography>
     <FormControlLabel control={<Checkbox />} onClick={()=>setShowPassword(!showPassword)} label="Show Password"  />
                         </Box>
